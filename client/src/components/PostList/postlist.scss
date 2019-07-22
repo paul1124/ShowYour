@@ -1,0 +1,12 @@
+.postlist {
+  width: 100%;
+  .post {
+    width: 100%;
+    text-align: left;
+    background-color: lightgray;
+    h2, h4, p {
+      border: 1px solid lightgray;
+      // padding: 1em;
+    } 
+  }
+}

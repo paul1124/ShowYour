@@ -1,0 +1,16 @@
+.addpost {
+  margin: 0 auto;
+  // position: absolute;
+  width: 80%;
+  height: 100vh;
+  // background: red;
+  &-form {
+    margin: 0 auto;
+    // position: absolute;
+
+    label, input, textarea, select {
+      // text-align: left;
+      width: 100%;
+    }
+  }
+}
