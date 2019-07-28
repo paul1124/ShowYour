@@ -17,9 +17,9 @@ export default function AddPost() {
         <input type="text" required onChange={onChangeTitle} />
         <label>Post Type</label>
         <select value="social" onChange={onChangePostType}>
-          <option value="social">Social</option>
-          <option value="buysell">Buy/Sell</option>
-          <option value="etc">etc</option>
+          <option value="Social">Social</option>
+          <option value="Buy/Sell">Buy/Sell</option>
+          <option value="Etc.">etc</option>
         </select>
         <label>Creator</label>
         <input type="text" required onChange={onChangeCreator} />
@@ -55,7 +55,9 @@ export default function AddPost() {
     }
     console.log(post);
 
-    // axios.post('http://localhost:5000/posts/add', post)
-    //   .then(res => console.log(res.data));
+    axios.post('http://localhost:5000/posts/add', post)
+      .then(res => console.log(res.data));
+
+    window.location = '/';
   }
 }

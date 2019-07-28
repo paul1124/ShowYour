@@ -28,6 +28,7 @@ export default function PostList() {
             <p>{post.content}</p>
             <p>{post.date}</p>
             <button onClick={() => onDelete(post._id)}>Delete</button>
+            {/* <button onClick={() => } */}
           </div>
       )})}
     </div>
@@ -36,5 +37,9 @@ export default function PostList() {
     axios.delete('http://localhost:5000/posts/' + id)
       .then(res => console.log(res.data));
     setPostlist(postlist.filter(post => post._id !== id));
+  }
+
+  function onEdit(id) {
+    axios.post('http://localhost:5000/update/' + id, )
   }
 }
